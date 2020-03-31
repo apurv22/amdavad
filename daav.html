@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.image{
+			height: 13rem;
+			width: 13rem;
+			margin: 10px 10px;
+		}
+	</style>
+</head>
+<body class="bg-dark">
+	<br><br>
+	<div class="container justify-content-center text-center">
+		<div class="justify-content-center">
+				<img src="0.jpg" id="1" class="image">
+				<img src="0.jpg" id="2" class="image">
+
+		<br>
+
+				<img src="0.jpg" id="3" class="image">
+				<img src="0.jpg" id="4" class="image">
+		</div>
+		<br><br>
+		<div class="row justify-content-center">
+			<button onclick="generate()" class="btn btn-success btn-lg">Take turn</button>	
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	function generate() {
+		// body...
+		var num = Math.floor(Math.random() * 2);
+		var img1 = document.getElementById("1");
+		img1.setAttribute("src", num.toString()+".jpg");
+		num = Math.floor(Math.random() * 2);
+		var img2 = document.getElementById("2");
+		img2.setAttribute("src", num.toString()+".jpg");
+		num = Math.floor(Math.random() * 2);
+		var img3 = document.getElementById("3");
+		img3.setAttribute("src", num.toString()+".jpg");
+		num = Math.floor(Math.random() * 2);
+		var img4 = document.getElementById("4");
+		img4.setAttribute("src", num.toString()+".jpg");
+
+	}
+</script>
+</html>
